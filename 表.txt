@@ -1,0 +1,6 @@
+CREATE TABLE code_questions (
+    id SERIAL PRIMARY KEY, -- 主键，自增 ID
+    original_text TEXT NOT NULL, -- OCR 识别出的原始文本
+    polished_text TEXT NOT NULL, -- OpenAI 润色后的文本
+    created_at TIMESTAMP DEFAULT NOW() -- 记录创建时间，默认当前时间
+);
